@@ -1,0 +1,42 @@
+package resolvendo_desafios_dio;
+
+import java.util.Scanner;
+
+public class Quitanda_Ze {
+
+	public static void main(String[] args) {
+
+		Scanner input = new Scanner(System.in);
+
+		double valorTotal = 0, desconto, novoValor, novoValor2;
+		int morango, maca, kg_Total;
+
+		morango = input.nextInt();
+		maca = input.nextInt(); 
+		kg_Total = morango + maca; 
+
+		if(morango <= 5 && maca <= 5 && valorTotal > 25 || kg_Total > 8) {
+			novoValor = morango * 2.50;
+			novoValor2 = maca *1.80; 
+			valorTotal = novoValor + novoValor2;
+			desconto = valorTotal * 0.9; 
+			System.out.println(desconto);
+		}
+
+		else if(morango <= 5 && maca <= 5){
+			novoValor = morango * 2.50;
+			novoValor2 = maca *1.80; 
+			valorTotal = novoValor + novoValor2;
+			System.out.println(valorTotal);
+		}
+
+		else {
+			novoValor = morango * 2.20;
+			novoValor2 = maca * 1.50; 
+			valorTotal = novoValor + novoValor2;
+			System.out.println(valorTotal);
+		}
+	}
+}
+
+
